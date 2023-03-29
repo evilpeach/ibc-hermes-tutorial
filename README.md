@@ -16,15 +16,10 @@ After installing Hermes, create a `.hermes` directory in your root directory and
 
 You also need to add a relayer key to each chain. Follow the instructions below for adding the relayer key to Osmosis testnet and Beebchain.
 
-### .ENV example
+### mnenoic_file.json
 
 ```
-MNEMONIC=word1 word2 ... word24
-RPC_PATH=https://rpc-test.osmosis.zone:443
-GAS=1000000
-FEE=25009uosmo
-PREFIX=osmo
-CHAIN_ID=osmo-test-4
+word1 ... word24
 ```
 
 ### Adding a relayer key to Osmosis testnet
@@ -68,6 +63,17 @@ To create a new client, connection, and channel on the transfer port in both cha
 
 ```bash
 bash create_transfer_channel.sh $OSMO $BEEB
+```
+
+### .ENV example
+
+```
+MNEMONIC=word1 word2 ... word24
+RPC_PATH=https://rpc-test.osmosis.zone:443
+GAS=1000000
+FEE=25009uosmo
+PREFIX=osmo
+CHAIN_ID=osmo-test-4
 ```
 
 Get channel ID from result and transfer tokens through IBC, run the following command:
